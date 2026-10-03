@@ -1,0 +1,22 @@
+{
+  "id": "cs_23_binary_search",
+  "category": "theory",
+  "difficulty": 3,
+  "robot": {
+    "x": 4,
+    "y": 1,
+    "dir": "sever"
+  },
+  "beepers": {
+    "1,1": 1,
+    "2,1": 2,
+    "3,1": 4,
+    "4,1": 6,
+    "5,1": 8,
+    "6,1": 9,
+    "7,1": 12
+  },
+  "walls": [
+    { "x": 7, "y": 1, "type": "vychod" }
+  ]
+}

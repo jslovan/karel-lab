@@ -1,0 +1,12 @@
+{
+  "id": "basics_02_house",
+  "category": "basics",
+  "difficulty": 1,
+  "robot": {
+    "x": 1,
+    "y": 1,
+    "dir": "vychod"
+  },
+  "beepers": {},
+  "walls": []
+}

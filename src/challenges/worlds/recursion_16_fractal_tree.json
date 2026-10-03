@@ -1,0 +1,12 @@
+{
+  "id": "recursion_16_fractal_tree",
+  "category": "recursion",
+  "difficulty": 3,
+  "robot": {
+    "x": 5,
+    "y": 1,
+    "dir": "sever"
+  },
+  "beepers": {},
+  "walls": []
+}

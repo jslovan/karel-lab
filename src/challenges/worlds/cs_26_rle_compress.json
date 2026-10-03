@@ -1,0 +1,22 @@
+{
+  "id": "cs_26_rle_compress",
+  "category": "theory",
+  "difficulty": 3,
+  "robot": {
+    "x": 1,
+    "y": 2,
+    "dir": "vychod"
+  },
+  "beepers": {
+    "1,2": 1,
+    "2,2": 1,
+    "3,2": 1,
+    "6,2": 1,
+    "7,2": 1,
+    "8,2": 1,
+    "9,2": 1
+  },
+  "walls": [
+    { "x": 9, "y": 2, "type": "vychod" }
+  ]
+}

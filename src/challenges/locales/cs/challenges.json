@@ -1,0 +1,157 @@
+{
+  "first_steps": {
+    "title": "První krůčky",
+    "summary": "Dojdi ke značce, seber ji a polož ji na bezpečné místo.",
+    "code": "// ==========================================\n// VÝZVA: První krůčky (Základní pohyby)\n// ==========================================\n// ÚKOL:\n// 1. Dojdi ke značce na poli (4, 1).\n// 2. Seber značku příkazem 'zvedni'.\n// 3. Otoč se doleva ('vlevo') a udělej 2 kroky.\n// 4. Polož značku na nové místo ('poloz').\n// ==========================================\n\nkrok\nkrok\nkrok\nzvedni\n"
+  },
+  "basics_01_monkey": {
+    "title": "Karlova opice",
+    "summary": "Oprav rozbitý kód a pomoz Karlovi postavit sloup ze 3 značek nad sebou.",
+    "code": "// Karel měl postavit sloup 3 značek nad sebou.\n// Něco se ale pokazilo! Nemaž kód, najdi chybu.\n\npoloz\nkrok\npoloz\nvlevo\nkrok\npoloz\n"
+  },
+  "basics_02_house": {
+    "title": "První cihly",
+    "summary": "Postav základní čtvercový domeček 2x2 ze značek.",
+    "code": "// Postav čtverec 2x2 ze značek.\n// Na každé ze 4 rohové pozice musí ležet 1 značka.\n\n"
+  },
+  "basics_03_architect": {
+    "title": "Architekt",
+    "summary": "Nauč Karla nové slovo 'vpravo' a 'strana', abys postavil větší dům bez psaní stohu kódu.",
+    "code": "// Vytvoř nové příkazy pro Karla.\n// Postav dům o straně 3 značky.\n\ndef vpravo [\n  vlevo\n  vlevo\n  vlevo\n]\n\n"
+  },
+  "basics_04_stairs": {
+    "title": "Obří schody",
+    "summary": "Postav schodiště o 4 schodech pomocí cyklu 'opakuj'.",
+    "code": "// Definuj jeden schod a pak použij cyklus 'opakuj 4'.\n\ndef schod [\n  // Jak vypadá jeden schod nahoru?\n]\n\n"
+  },
+  "beeper_harvest": {
+    "title": "Sběr jablek v chodbě",
+    "summary": "Použij cyklus 'dokud', aby Karel posbíral všechny značky v dlouhé chodbě.",
+    "code": "// ==========================================\n// VÝZVA: Sběr jablek (Cykly)\n// ==========================================\n// ÚKOL:\n// Karel stojí v chodbě plné značek.\n// Na konci chodby je zeď.\n//\n// Použij cyklus 'dokud neni zed', aby Karel\n// v každém kroku posbíral značku a posunul se vpřed.\n// Nezapomeň zvednout i tu poslední!\n// ==========================================\n\ndokud neni zed [\n  zvedni\n  krok\n]\nzvedni\n"
+  },
+  "basics_05_vacuum": {
+    "title": "Robotický vysavač",
+    "summary": "Karel jako chytrý vysavač: vysávej značky a jdi rovně, dokud nenarazíš na zeď.",
+    "code": "// FÁZE II: Oči dokořán (Reaktivní programování)\n// ÚKOL: Karel funguje jako robotický vysavač.\n// Jdi rovně, a když na políčku leží značka (smetí), zvedni ji.\n// Zastav se těsně před zdí.\n\ndokud neni zed [\n  kdyz znacka [\n    zvedni\n  ]\n  krok\n]\n\nkdyz znacka [\n  zvedni\n]\n"
+  },
+  "basics_06_minefield": {
+    "title": "Minové pole",
+    "summary": "Projdi neznámou chodbu a zneškodni všechny miny (seber i vícero značek na jednom poli).",
+    "code": "// ÚKOL: V chodbě jsou miny (značky).\n// Pozor: na některých polích může být VÍCE značek na sobě!\n// Pro každé pole seber VŠECHNY značky (cyklus v cyklu).\n\ndef vycisti_pole [\n  dokud znacka [\n    zvedni\n  ]\n]\n\ndokud neni zed [\n  vycisti_pole\n  krok\n]\nvycisti_pole\n"
+  },
+  "automata_07_right_hand": {
+    "title": "Pravidlo pravé ruky",
+    "summary": "Projdi neznámým bludištěm bez ostrovů přidržováním se pravé zdi až k cíli.",
+    "code": "// BLOK 4: Labyrint světa (Konečné automaty)\n// ÚKOL: Dostaň se ke značce na souřadnicích (6,6) pomocí pravidla pravé ruky!\n// Algoritmus pro 1 krok:\n// 1. Zkus se otočit vpravo a jít dopředu.\n// 2. Pokud je tam zeď, zkus jít rovně.\n// 3. Pokud je i tam zeď, otoč se vlevo.\n\ndef vpravo [\n  vlevo\n  vlevo\n  vlevo\n]\n\ndef krok_po_zdi [\n  vpravo\n  kdyz zed [\n    vlevo\n    kdyz zed [\n      vlevo\n      kdyz zed [\n        vlevo\n      ] jinak [\n        krok\n      ]\n    ] jinak [\n      krok\n    ]\n  ] jinak [\n    krok\n  ]\n]\n\ndokud neni znacka [\n  krok_po_zdi\n]\n"
+  },
+  "automata_08_island_trap": {
+    "title": "Zbloudilý průzkumník",
+    "summary": "Prozkoumej past ostrova v bludišti: proč prosté pravidlo pravé ruky nestačí a vede k zacyklení.",
+    "code": "// ÚKOL: Uprostřed světa je ostrov se zdmi!\n// Pokud se chytíš pravé ruky na vnitřním ostrově, budeš běhat v kruhu.\n// Napiš chytřejší automat, který dokáže opustit obvod ostrova a najít cíl (9,9)!\n\ndef vpravo [\n  vlevo\n  vlevo\n  vlevo\n]\n\n// Zkus navrhnout stavový automat se stavy HLEDEJ_STENU a OBIEHEJ:\n\n"
+  },
+  "automata_09_visited_marks": {
+    "title": "Drobná paměť",
+    "summary": "Značkuj si navštívené křižovatky pokládáním značek, abys detekoval smyčky a našel cestu ven.",
+    "code": "// ÚKOL: Karel nemá vnitřní proměnné, ale má prostor jako paměť!\n// Na každé křižovatce polož značku. Když přijdeš na pole se značkou,\n// víš, že jsi v cyklu a musíš zkusit jiný směr.\n\ndef vpravo [\n  vlevo\n  vlevo\n  vlevo\n]\n\n"
+  },
+  "geometry_10_ping_pong": {
+    "title": "Kde je polovina? (Ping-Pong)",
+    "summary": "Najdi přesný geometrický střed místnosti posouváním krajních značek k sobě.",
+    "code": "// FÁZE II - BLOK 5: Geometr (Prostor jako paměť)\n// ÚKOL: Na krajích řady (1,1) a (10,1) leží značky.\n// Bez počítání čísel najdi střed tak, že budeš střídavě\n// přenášet levou značku o 1 krok doprava a pravou o 1 doleva,\n// dokud se nepotkají uprostřed!\n\n"
+  },
+  "geometry_11_golden_ratio": {
+    "title": "Zlatý řez / Dělicí bod",
+    "summary": "Rozděl prostor v poměru 1:2 pomocí geometrického skládání úhlopříček a kroků.",
+    "code": "// ÚKOL: Rozděl 10x10 pole v poměru 1:2.\n// Kreslením vzoru '2 kroky na východ, 1 krok na sever'\n// vytvoříš přímku se směrnicí 1/2 a určíš přesný dělící bod!\n\n"
+  },
+  "geometry_12_chessboard": {
+    "title": "Šachovnice",
+    "summary": "Vyplň celou mřížku šachovnicovým vzorem s propagací parity v každém řádku.",
+    "code": "// ÚKOL: Vytvoř na celém světě 10x10 šachovnici ze značek.\n// Pozor na střídání sudých a lichých řádků (parita),\n// aby vzor na sebe správně navazoval!\n\ndef radek_lichy [\n  // Polož značku na 1, 3, 5, 7, 9\n]\n\ndef radek_sudy [\n  // Polož značku na 2, 4, 6, 8, 10\n]\n\n"
+  },
+  "recursion_13_yoyo": {
+    "title": "Karlovo Jo-Jo",
+    "summary": "Dojdi ke zdi a vrať se zpět na start BEZ jakéhokoliv cyklu — pouze pomocí rekurze a zásobníku.",
+    "code": "// FÁZE III: Zrcadlové síně (Zásobníky a Rekurze)\n// ÚKOL: Dojdi ke zdi a vrať se na výchozí pozici (1,1).\n// PODMÍNKA: Je ZAKÁZÁNO použít cykly 'dokud' i 'opakuj'!\n// Využij rekurzivní volání: kód po rekurzi se provede při návratu.\n\ndef jojo [\n  kdyz neni zed [\n    krok\n    jojo\n    krok\n  ] jinak [\n    vlevo\n    vlevo\n  ]\n]\n\njojo\n"
+  },
+  "recursion_14_harvest": {
+    "title": "Sklizeň na hromádku",
+    "summary": "Posbírej značky po cestě a cestou zpět (při vynořování z rekurze) je všechny polož na start.",
+    "code": "// ÚKOL: V řadě leží značky. Karel je má posbírat a položit na pole (1,1).\n// Využij rekurzi: cestou tam sbírej ('zvedni'), cestou zpět pokládej ('poloz').\n\ndef sklid_a_vrat [\n  kdyz neni zed [\n    kdyz znacka [\n      zvedni\n      krok\n      sklid_a_vrat\n      poloz\n    ] jinak [\n      krok\n      sklid_a_vrat\n    ]\n  ] jinak [\n    vlevo\n    vlevo\n  ]\n]\n\n"
+  },
+  "recursion_15_tremaux": {
+    "title": "Trémauxův algoritmus",
+    "summary": "Prozkoumej rozvětvené bludiště: rekurzivně vyzkoušej všechny cesty a ze slepých uliček vycouvej.",
+    "code": "// BLOK 7: Pokročilé stromy a grafy (DFS - Prohledávání do hloubky)\n// ÚKOL: Najdi značku na (8,8) v bludišti se slepými uličkami.\n// Napiš rekurzivní funkci 'hledej', která zkusí jít dopředu,\n// a pokud narazí na zeď/slepou uličku, vrátí se o krok zpět.\n\n"
+  },
+  "recursion_16_fractal_tree": {
+    "title": "Karlovo kapradí (Fraktál)",
+    "summary": "Vykresli rekurzivní fraktálový binární strom větvící se na obě strany.",
+    "code": "// ÚKOL: Vykresli fraktálový strom ze značek!\n// Kmen -> větev vlevo (rekurze) -> návrat -> větev vpravo (rekurze) -> návrat.\n\ndef vpravo [\n  vlevo\n  vlevo\n  vlevo\n]\n\ndef strom [\n  poloz\n  krok\n  vlevo\n  kdyz neni zed [\n    // Vykresli levou podsložku\n  ]\n]\n\n"
+  },
+  "cs_17_counter": {
+    "title": "Počitadlo",
+    "summary": "Vytvoř numerické schody: sloupec 1 má 1 značku, sloupec 2 má 2, sloupec 3 má 3 značky...",
+    "code": "// FÁZE IV: Křemíkové srdce (CS Teorie a Aritmetika)\n// ÚKOL: Postav schodiště číselné posloupnosti 1, 2, 3, 4, 5...\n// V každém dalším sloupci postav sloupec o 1 vyšší než v předchozím.\n\n"
+  },
+  "cs_18_binary_printer": {
+    "title": "Binární tiskárna",
+    "summary": "Přečti binární kód na zemi (0 nebo 1) a pro každou jedničku vytiskni svislý sloupec.",
+    "code": "// ÚKOL: Na řádku 1 je zapsán binární kód (1 = značka, 0 = prázdno).\n// Projdi řádek: kde je 1, postav sloupec výšky 4 značek, kde je 0, nech prázdno.\n\n"
+  },
+  "cs_19_binary_adder": {
+    "title": "Binární sčítačka",
+    "summary": "Sečti dvě binární čísla zapsaná na řádcích 2 a 3 a výsledek s přenosem (carry) zapiš na řádek 1.",
+    "code": "// ÚKOL: Hardwarová sčítačka (Full Adder) v Karlovi!\n// Řádek 2 = číslo A, Řádek 3 = číslo B.\n// Spočti A + B a zapiš výsledek na řádek 1.\n// Nezapomeň na přenos jedničky do vyššího řádu (Carry bit)!\n\n"
+  },
+  "cs_20_integral": {
+    "title": "Riemannův integrál",
+    "summary": "Spočítej a vyplň plochu pod křivkou tvořenou zdmi jako určitý integrál.",
+    "code": "// ÚKOL: Zdi tvoří matematickou křivku f(x).\n// Vyplň všechny body pod křivkou značkami a spočítej tak plochu (integrál).\n\n"
+  },
+  "cs_21_sorting": {
+    "title": "Třídič (Bubble Sort)",
+    "summary": "Seřaď hromádky značek vzestupně podle jejich výšky pomocí porovnávání sousedů.",
+    "code": "// BLOK 9: Organizovaný chaos (Algoritmy a složitost)\n// ÚKOL: Na řádku 1 jsou hromádky různých výšek [4, 1, 5, 2, 3].\n// Porovnávej dvě sousední hromádky a prohoď je, pokud je levá větší než pravá.\n// Opakuj, dokud není celá řada seřazena od nejmenší po největší!\n\n"
+  },
+  "cs_22_spiral": {
+    "title": "Lovec min (Spirála)",
+    "summary": "Najdi skrytou značku v otevřeném prostoru pomocí rovnoměrně se rozšiřující spirály.",
+    "code": "// ÚKOL: Někde v poli 10x10 je ukryta značka.\n// Prohledej prostor spirálou: 1 krok, vlevo, 1 krok, vlevo, 2 kroky, vlevo, 2 kroky...\n// Zastav se, jakmile na značku narazíš!\n\n"
+  },
+  "cs_23_binary_search": {
+    "title": "Binární vyhledávání",
+    "summary": "Najdi hromádku o zadané výšce (8 značek) v seřazeném poli půlením intervalu.",
+    "code": "// ÚKOL: Hromádky jsou seřazené od 1 do 12.\n// Místo zkoušení každé po řadě (O(N)) použij půlení intervalu (O(log N)):\n// Jdi do středu, porovnej výšku a pokračuj v levé nebo pravé polovině!\n\n"
+  },
+  "cs_24_sieve": {
+    "title": "Eratosthenovo síto",
+    "summary": "Najdi prvočísla mezi 2 a 10 vyškrtáváním násobků (2, 3...) z řady značek.",
+    "code": "// BLOK 10: Diskrétní matematika a Komprese\n// ÚKOL: Na pozicích 2 až 10 leží po 1 značce.\n// Začni na pozici 2 (prvočíslo) a odstraň značky na všech jejích násobcích (4, 6, 8, 10).\n// Pak přejdi na 3 a odstraň (6, 9)... Na konci zůstanou jen prvočísla (2, 3, 5, 7)!\n\n"
+  },
+  "cs_25_gcd": {
+    "title": "Euklidův algoritmus (NSD)",
+    "summary": "Najdi největšího společného dělitele dvou hromádek značek postupným odčítáním.",
+    "code": "// ÚKOL: Máš dvě hromádky o velikosti A (8) a B (6).\n// Dokud se velikosti nerovnají, odečti menší od větší (odeber příslušný počet značek).\n// Až se rovnají, zbylá výška je NSD(A, B) = 2!\n\n"
+  },
+  "cs_26_rle_compress": {
+    "title": "Zip archiv (RLE Komprese)",
+    "summary": "Zkomprimuj řadu jedniček a nul: spočítej délky souvislých úseků a zapiš je na řádek 1.",
+    "code": "// ÚKOL: Bezztrátová komprese Run-Length Encoding (RLE)!\n// Řádek 2 obsahuje úseky jedniček a mezer: [1,1,1, 0,0, 1,1,1,1].\n// Zapiš na řádek 1 počty značek v jednotlivých úsecích (3, 2, 4).\n\n"
+  },
+  "cs_27_viterbi": {
+    "title": "Viterbi / Dynamické programování",
+    "summary": "Spočítej počet unikátních cest v mřížce se zdmi pomocí memoizace (zapisování mezivýsledků).",
+    "code": "// BLOK 11: Architekt Matrixu (Teoretická informatika)\n// ÚKOL: Kolik existuje cest z (1,1) do (4,4) pouze kroky na Sever a Východ?\n// Počet cest do buňky (X, Y) = Cesty(X-1, Y) + Cesty(X, Y-1).\n// Počítej hodnoty od startu a ukládej je jako hromádky značek na jednotlivá pole!\n\n"
+  },
+  "cs_28_cellular_automata": {
+    "title": "Celulární automat (Pravidlo 30)",
+    "summary": "Generuj novou generaci buněk řádek po řádku podle stavu tří sousedů nad sebou.",
+    "code": "// ÚKOL: Wolframův celulární automat!\n// Řádek 10 obsahuje počáteční semínko na pozici (5,10).\n// Na řádku 9 vygeneruj nové buňky podle Pravidla 30 na základě trojic sousedů z řádku 10.\n\n"
+  },
+  "cs_29_self_modifying": {
+    "title": "ULTIMA (Virtuální procesor)",
+    "summary": "Karel jako CPU: čti kód programu ze země (instrukce 1=krok, 2=vlevo, 3=polož, 0=konec) a vykonej ho.",
+    "code": "// ÚKOL: Turingovsky úplný virtuální stroj!\n// Na řádku 1 leží instrukce zakódované počtem značek:\n// 1 značka = krok\n// 2 značky = vlevo\n// 3 značky = poloz\n// 0 značek = zastav program\n// Karel přečte instrukci na poli, provede ji v herním světě a posune se na další!\n\n"
+  }
+}

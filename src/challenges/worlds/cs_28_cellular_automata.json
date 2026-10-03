@@ -1,0 +1,14 @@
+{
+  "id": "cs_28_cellular_automata",
+  "category": "theory",
+  "difficulty": 3,
+  "robot": {
+    "x": 1,
+    "y": 10,
+    "dir": "vychod"
+  },
+  "beepers": {
+    "5,10": 1
+  },
+  "walls": []
+}

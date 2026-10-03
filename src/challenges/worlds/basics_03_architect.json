@@ -1,0 +1,12 @@
+{
+  "id": "basics_03_architect",
+  "category": "basics",
+  "difficulty": 2,
+  "robot": {
+    "x": 1,
+    "y": 1,
+    "dir": "vychod"
+  },
+  "beepers": {},
+  "walls": []
+}

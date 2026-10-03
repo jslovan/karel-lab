@@ -1,0 +1,14 @@
+{
+  "id": "recursion_13_yoyo",
+  "category": "recursion",
+  "difficulty": 2,
+  "robot": {
+    "x": 1,
+    "y": 1,
+    "dir": "vychod"
+  },
+  "beepers": {},
+  "walls": [
+    { "x": 8, "y": 1, "type": "vychod" }
+  ]
+}

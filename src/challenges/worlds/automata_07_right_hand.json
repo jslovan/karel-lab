@@ -1,0 +1,29 @@
+{
+  "id": "automata_07_right_hand",
+  "category": "automata",
+  "difficulty": 2,
+  "robot": {
+    "x": 1,
+    "y": 1,
+    "dir": "sever"
+  },
+  "beepers": {
+    "6,6": 1
+  },
+  "walls": [
+    { "x": 1, "y": 2, "type": "sever" },
+    { "x": 2, "y": 1, "type": "vychod" },
+    { "x": 2, "y": 3, "type": "sever" },
+    { "x": 3, "y": 2, "type": "vychod" },
+    { "x": 3, "y": 4, "type": "sever" },
+    { "x": 4, "y": 3, "type": "vychod" },
+    { "x": 4, "y": 5, "type": "sever" },
+    { "x": 5, "y": 4, "type": "vychod" },
+    { "x": 5, "y": 6, "type": "sever" },
+    { "x": 6, "y": 5, "type": "vychod" },
+    { "x": 2, "y": 2, "type": "sever" },
+    { "x": 3, "y": 3, "type": "sever" },
+    { "x": 4, "y": 4, "type": "sever" },
+    { "x": 5, "y": 5, "type": "sever" }
+  ]
+}

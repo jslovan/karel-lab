@@ -1,0 +1,18 @@
+{
+  "id": "first_steps",
+  "category": "basics",
+  "difficulty": 1,
+  "robot": {
+    "x": 1,
+    "y": 1,
+    "dir": "vychod"
+  },
+  "beepers": {
+    "4,1": 1
+  },
+  "walls": [
+    { "x": 4, "y": 3, "type": "sever" },
+    { "x": 5, "y": 3, "type": "sever" },
+    { "x": 6, "y": 3, "type": "sever" }
+  ]
+}

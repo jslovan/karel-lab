@@ -1,0 +1,15 @@
+{
+  "id": "geometry_10_ping_pong",
+  "category": "geometry",
+  "difficulty": 2,
+  "robot": {
+    "x": 1,
+    "y": 1,
+    "dir": "vychod"
+  },
+  "beepers": {
+    "1,1": 1,
+    "10,1": 1
+  },
+  "walls": []
+}

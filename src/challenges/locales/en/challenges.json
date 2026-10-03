@@ -1,0 +1,157 @@
+{
+  "first_steps": {
+    "title": "First Steps",
+    "summary": "Walk to the beeper, pick it up, and place it in a safe spot.",
+    "code": "// ==========================================\n// CHALLENGE: First Steps (Basic Movements)\n// ==========================================\n// GOAL:\n// 1. Walk to the beeper at position (4, 1).\n// 2. Pick up the beeper using 'pick'.\n// 3. Turn left ('left') and take 2 steps.\n// 4. Place the beeper at the new spot ('put').\n// ==========================================\n\nstep\nstep\nstep\npick\n"
+  },
+  "basics_01_monkey": {
+    "title": "Karel's Monkey",
+    "summary": "Fix the broken code and help Karel build a column of 3 beepers.",
+    "code": "// Karel was supposed to build a column of 3 beepers on top of each other.\n// Something went wrong! Don't delete the code, find and fix the bug.\n\nput\nstep\nput\nleft\nstep\nput\n"
+  },
+  "basics_02_house": {
+    "title": "First Bricks",
+    "summary": "Build a basic 2x2 square house out of beepers.",
+    "code": "// Build a 2x2 square using beepers.\n// Place 1 beeper on each of the 4 corner positions.\n\n"
+  },
+  "basics_03_architect": {
+    "title": "The Architect",
+    "summary": "Teach Karel the new command 'right' and 'side' to build a larger house without writing piles of code.",
+    "code": "// Create new commands for Karel.\n// Build a house with side length of 3 beepers.\n\ndef right [\n  left\n  left\n  left\n]\n\n"
+  },
+  "basics_04_stairs": {
+    "title": "Giant Stairs",
+    "summary": "Build a staircase of 4 steps using the 'repeat' loop.",
+    "code": "// Define a single step and then use the 'repeat 4' loop.\n\ndef stair [\n  // What does one step up look like?\n]\n\n"
+  },
+  "beeper_harvest": {
+    "title": "Beeper Harvest Corridor",
+    "summary": "Use the 'while' loop to let Karel collect all beepers along the corridor.",
+    "code": "// ==========================================\n// CHALLENGE: Beeper Harvest (Loops)\n// ==========================================\n// GOAL:\n// Karel is standing in a long corridor full of beepers.\n// At the end of the corridor is a solid wall.\n//\n// Use 'while not wall' so Karel picks up the beeper\n// at each step and moves forward.\n// Don't forget to pick up the very last beeper!\n// ==========================================\n\nwhile not wall [\n  pick\n  step\n]\npick\n"
+  },
+  "basics_05_vacuum": {
+    "title": "Robotic Vacuum",
+    "summary": "Karel acts as a smart vacuum: clean beepers and move straight until you meet a wall.",
+    "code": "// PHASE II: Eyes Wide Open (Reactive Programming)\n// GOAL: Karel acts as a robotic vacuum cleaner.\n// Move forward, and if there is a beeper (trash) on the cell, pick it up.\n// Stop right before the wall.\n\nwhile not wall [\n  if beeper [\n    pick\n  ]\n  step\n]\n\nif beeper [\n  pick\n]\n"
+  },
+  "basics_06_minefield": {
+    "title": "Minefield Corridor",
+    "summary": "Navigate an unknown corridor and disarm all mines (pick up all multiple beepers per cell).",
+    "code": "// GOAL: Mines (beepers) are scattered in the corridor.\n// Watch out: some cells might have MULTIPLE beepers stacked!\n// For each cell, pick ALL beepers (loop inside loop).\n\ndef clear_cell [\n  while beeper [\n    pick\n  ]\n]\n\nwhile not wall [\n  clear_cell\n  step\n]\nclear_cell\n"
+  },
+  "automata_07_right_hand": {
+    "title": "Right-Hand Rule",
+    "summary": "Navigate through a maze without islands by hugging the right wall all the way to the goal.",
+    "code": "// BLOCK 4: Labyrinth of the World (Finite State Automata)\n// GOAL: Reach the target beeper at position (6,6) using the right-hand wall-follower rule!\n// Step logic:\n// 1. Try to turn right and step forward.\n// 2. If blocked by a wall, try stepping straight.\n// 3. If also blocked, turn left.\n\ndef right [\n  left\n  left\n  left\n]\n\ndef step_along_wall [\n  right\n  if wall [\n    left\n    if wall [\n      left\n      if wall [\n        left\n      ] else [\n        step\n      ]\n    ] else [\n      step\n    ]\n  ] else [\n    step\n  ]\n]\n\nwhile not beeper [\n  step_along_wall\n]\n"
+  },
+  "automata_08_island_trap": {
+    "title": "The Trapped Explorer",
+    "summary": "Investigate the maze island trap: why the naive right-hand rule loops endlessly.",
+    "code": "// GOAL: There is an isolated island in the middle of the maze!\n// Hugging the right wall on the inner island causes an infinite loop.\n// Design a smarter state machine that leaves the perimeter to find the exit at (9,9)!\n\ndef right [\n  left\n  left\n  left\n]\n\n// Try designing a state machine with SEEK_WALL and FOLLOW states:\n\n"
+  },
+  "automata_09_visited_marks": {
+    "title": "Breadcrumb Memory",
+    "summary": "Mark visited intersections with beepers to detect loops and escape the maze.",
+    "code": "// GOAL: Karel has no internal variables, but space is memory!\n// Drop a beeper at every junction. When you encounter a cell with a beeper,\n// you know you have visited it before and must try another direction.\n\ndef right [\n  left\n  left\n  left\n]\n\n"
+  },
+  "geometry_10_ping_pong": {
+    "title": "Finding the Midpoint (Ping-Pong)",
+    "summary": "Find the exact geometric center of the room by moving boundary beepers inward.",
+    "code": "// PHASE II - BLOCK 5: The Geometer (Space as Memory)\n// GOAL: Beepers are placed at (1,1) and (10,1).\n// Without counting numbers, find the midpoint by taking turns:\n// carry the left beeper 1 step right, then the right beeper 1 step left,\n// until they meet in the middle!\n\n"
+  },
+  "geometry_11_golden_ratio": {
+    "title": "Golden Ratio / Partitioning",
+    "summary": "Divide the 10x10 space in a 1:2 ratio using geometric slope diagonals.",
+    "code": "// GOAL: Partition the 10x10 grid in a 1:2 ratio.\n// By drawing the slope pattern '2 steps East, 1 step North',\n// construct a line with slope 1/2 to locate the exact partition coordinate!\n\n"
+  },
+  "geometry_12_chessboard": {
+    "title": "Chessboard Pattern",
+    "summary": "Fill the entire grid with an alternating checkerboard pattern with row parity.",
+    "code": "// GOAL: Fill the entire 10x10 world with an alternating checkerboard pattern.\n// Pay close attention to odd vs even rows (parity)\n// so the pattern matches across all rows!\n\ndef odd_row [\n  // Place beepers at 1, 3, 5, 7, 9\n]\n\ndef even_row [\n  // Place beepers at 2, 4, 6, 8, 10\n]\n\n"
+  },
+  "recursion_13_yoyo": {
+    "title": "Karel's Yo-Yo",
+    "summary": "Walk to the wall and return to the start WITHOUT any loops — using only call stack recursion.",
+    "code": "// PHASE III: Hall of Mirrors (Stacks & Recursion)\n// GOAL: Walk to the wall and return to the starting position (1,1).\n// CONSTRAINT: You are FORBIDDEN from using 'while' or 'repeat' loops!\n// Use recursion: code written after the recursive call executes on the return path.\n\ndef yoyo [\n  if not wall [\n    step\n    yoyo\n    step\n  ] else [\n    left\n    left\n  ]\n]\n\nyoyo\n"
+  },
+  "recursion_14_harvest": {
+    "title": "Harvest & Stack",
+    "summary": "Collect beepers along the corridor and stack them into a single pile at the start on return.",
+    "code": "// GOAL: Pick up all beepers and bring them back to (1,1).\n// Use recursion: pick ('pick') on the way out, drop ('put') on the way back.\n\ndef harvest_and_return [\n  if not wall [\n    if beeper [\n      pick\n      step\n      harvest_and_return\n      put\n    ] else [\n      step\n      harvest_and_return\n    ]\n  ] else [\n    left\n    left\n  ]\n]\n\n"
+  },
+  "recursion_15_tremaux": {
+    "title": "Trémaux's Algorithm",
+    "summary": "Explore a branching maze: recursively search pathways and backtrack out of dead ends.",
+    "code": "// BLOCK 7: Advanced Trees & Graphs (Depth-First Search)\n// GOAL: Find the beeper at (8,8) in a branching maze.\n// Write a recursive function 'search' that tries moving forward,\n// and backtracks if it hits a dead end.\n\n"
+  },
+  "recursion_16_fractal_tree": {
+    "title": "Karel's Fractal Fern",
+    "summary": "Draw a recursive branching binary tree of beepers.",
+    "code": "// GOAL: Draw a fractal tree out of beepers!\n// Trunk -> left branch (recursion) -> return -> right branch (recursion) -> return.\n\ndef right [\n  left\n  left\n  left\n]\n\ndef tree [\n  put\n  step\n  left\n  if not wall [\n    // Draw left subtree\n  ]\n]\n\n"
+  },
+  "cs_17_counter": {
+    "title": "The Counter",
+    "summary": "Build numeric stairs: column 1 has 1 beeper, column 2 has 2, column 3 has 3 beepers...",
+    "code": "// PHASE IV: Silicon Heart (CS Theory & Arithmetic)\n// GOAL: Build a staircase for the number sequence 1, 2, 3, 4, 5...\n// Each column must be 1 beeper taller than the previous one.\n\n"
+  },
+  "cs_18_binary_printer": {
+    "title": "Binary Printer",
+    "summary": "Read binary code on the ground (0 or 1) and print vertical columns for each 1.",
+    "code": "// GOAL: Row 1 encodes binary digits (1 = beeper, 0 = empty).\n// Traverse the row: where 1 is found, build a column of height 4; where 0, leave empty.\n\n"
+  },
+  "cs_19_binary_adder": {
+    "title": "Binary Full Adder",
+    "summary": "Add two binary numbers stored on rows 2 and 3, writing the result with carry to row 1.",
+    "code": "// GOAL: Implement a Hardware Full Adder in Karel!\n// Row 2 = Number A, Row 3 = Number B.\n// Compute A + B and write the sum bits onto Row 1.\n// Make sure to propagate the carry bit to higher columns!\n\n"
+  },
+  "cs_20_integral": {
+    "title": "Riemann Integral",
+    "summary": "Calculate and fill the area beneath a wall function curve as a definite integral.",
+    "code": "// GOAL: Walls form a mathematical curve f(x).\n// Fill all spaces underneath the curve with beepers to compute the area (integral).\n\n"
+  },
+  "cs_21_sorting": {
+    "title": "Sorter (Bubble Sort)",
+    "summary": "Sort beeper piles in ascending height order using adjacent pair comparisons.",
+    "code": "// BLOCK 9: Organized Chaos (Algorithms & Complexity)\n// GOAL: Row 1 contains beeper piles of heights [4, 1, 5, 2, 3].\n// Compare adjacent piles and swap them if the left pile is taller than the right.\n// Repeat until the entire row is sorted from shortest to tallest!\n\n"
+  },
+  "cs_22_spiral": {
+    "title": "Mine Hunter (Spiral)",
+    "summary": "Find a hidden beeper in open space using an expanding rectangular spiral search pattern.",
+    "code": "// GOAL: A beeper is hidden somewhere in the 10x10 field.\n// Search using an expanding spiral: 1 step, left, 1 step, left, 2 steps, left, 2 steps...\n// Stop as soon as the beeper is found!\n\n"
+  },
+  "cs_23_binary_search": {
+    "title": "Binary Search",
+    "summary": "Find the pile with a specific height (8 beepers) in a sorted array via binary partitioning.",
+    "code": "// GOAL: Piles are sorted in ascending order from 1 to 12.\n// Instead of linear scanning (O(N)), use binary search (O(log N)):\n// Jump to the middle, compare height, and continue in either the left or right half!\n\n"
+  },
+  "cs_24_sieve": {
+    "title": "Sieve of Eratosthenes",
+    "summary": "Find prime numbers between 2 and 10 by removing composite multiples from a line of beepers.",
+    "code": "// BLOCK 10: Discrete Math & Compression\n// GOAL: Positions 2 to 10 each start with 1 beeper.\n// Start at 2 (prime) and remove beepers on all multiples (4, 6, 8, 10).\n// Then proceed to 3 and clear (6, 9)... Only primes (2, 3, 5, 7) will remain!\n\n"
+  },
+  "cs_25_gcd": {
+    "title": "Euclidean Algorithm (GCD)",
+    "summary": "Find the greatest common divisor of two beeper piles using repeated subtraction.",
+    "code": "// GOAL: You have two piles of sizes A (8) and B (6).\n// While the sizes are unequal, subtract the smaller from the larger.\n// When equal, the remaining height is GCD(A, B) = 2!\n\n"
+  },
+  "cs_26_rle_compress": {
+    "title": "Zip Archive (RLE Compression)",
+    "summary": "Compress a sequence of bits using Run-Length Encoding: write run lengths onto row 1.",
+    "code": "// GOAL: Lossless Run-Length Encoding (RLE) compression!\n// Row 2 contains runs of beepers and gaps: [1,1,1, 0,0, 1,1,1,1].\n// Write the lengths of each consecutive run (3, 2, 4) onto Row 1.\n\n"
+  },
+  "cs_27_viterbi": {
+    "title": "Viterbi / Dynamic Programming",
+    "summary": "Count the number of unique paths through a walled grid using memoization on the floor.",
+    "code": "// BLOCK 11: Matrix Architect (Theoretical CS)\n// GOAL: Count paths from (1,1) to (4,4) moving only North and East.\n// Paths to cell (X, Y) = Paths(X-1, Y) + Paths(X, Y-1).\n// Store intermediate counts directly as beeper piles on the grid!\n\n"
+  },
+  "cs_28_cellular_automata": {
+    "title": "Cellular Automaton (Rule 30)",
+    "summary": "Generate successive generations row by row according to the 3-neighbor Rule 30.",
+    "code": "// GOAL: Wolfram's Elementary Cellular Automaton!\n// Row 10 contains the starting seed at (5,10).\n// On Row 9, generate new cells according to Rule 30 based on parent triplets from Row 10.\n\n"
+  },
+  "cs_29_self_modifying": {
+    "title": "ULTIMA (Virtual CPU)",
+    "summary": "Karel as a CPU: read bytecode instructions from the floor (1=step, 2=left, 3=put, 0=halt) and execute them.",
+    "code": "// GOAL: Turing-complete Virtual Machine interpreter!\n// Row 1 contains instructions encoded as beeper counts:\n// 1 beeper = step\n// 2 beepers = left\n// 3 beepers = put\n// 0 beepers = halt\n// Karel reads the instruction, executes it in the world, and moves to the next opcode!\n\n"
+  }
+}

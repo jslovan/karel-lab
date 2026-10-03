@@ -1,0 +1,14 @@
+{
+  "id": "cs_22_spiral",
+  "category": "theory",
+  "difficulty": 2,
+  "robot": {
+    "x": 5,
+    "y": 5,
+    "dir": "sever"
+  },
+  "beepers": {
+    "7,6": 1
+  },
+  "walls": []
+}

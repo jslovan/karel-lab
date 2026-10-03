@@ -1,0 +1,18 @@
+{
+  "id": "cs_27_viterbi",
+  "category": "theory",
+  "difficulty": 3,
+  "robot": {
+    "x": 1,
+    "y": 1,
+    "dir": "sever"
+  },
+  "beepers": {
+    "1,1": 1
+  },
+  "walls": [
+    { "x": 2, "y": 2, "type": "sever" },
+    { "x": 3, "y": 1, "type": "vychod" },
+    { "x": 3, "y": 3, "type": "sever" }
+  ]
+}

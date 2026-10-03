@@ -1,0 +1,30 @@
+{
+  "id": "cs_20_integral",
+  "category": "theory",
+  "difficulty": 3,
+  "robot": {
+    "x": 1,
+    "y": 1,
+    "dir": "vychod"
+  },
+  "beepers": {},
+  "walls": [
+    { "x": 1, "y": 2, "type": "sever" },
+    { "x": 2, "y": 3, "type": "sever" },
+    { "x": 3, "y": 5, "type": "sever" },
+    { "x": 4, "y": 6, "type": "sever" },
+    { "x": 5, "y": 6, "type": "sever" },
+    { "x": 6, "y": 5, "type": "sever" },
+    { "x": 7, "y": 3, "type": "sever" },
+    { "x": 8, "y": 2, "type": "sever" },
+    { "x": 1, "y": 3, "type": "vychod" },
+    { "x": 2, "y": 4, "type": "vychod" },
+    { "x": 2, "y": 5, "type": "vychod" },
+    { "x": 3, "y": 6, "type": "vychod" },
+    { "x": 5, "y": 6, "type": "vychod" },
+    { "x": 6, "y": 4, "type": "vychod" },
+    { "x": 6, "y": 5, "type": "vychod" },
+    { "x": 7, "y": 3, "type": "vychod" },
+    { "x": 8, "y": 1, "type": "vychod" }
+  ]
+}

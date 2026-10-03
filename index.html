@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <script>window.tau_file_system = {}; window.tau_user_input = function(){}; window.tau_user_output = function(){}; window.tau_user_error = function(){}; window.process = { browser: true }; window.nodejs_file_system = {}; window.nodejs_user_input = function(){}; window.nodejs_user_output = function(){}; window.nodejs_user_error = function(){};</script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Robot Karel - Prolog</title>
+    <script>
+      // Fallback message if raw source index.html is opened directly in a browser via file://
+      if (window.location.protocol === 'file:') {
+        window.addEventListener('DOMContentLoaded', function() {
+          setTimeout(function() {
+            var root = document.getElementById('root');
+            if (root && root.children.length === 0) {
+              root.innerHTML = '<div style="font-family: system-ui, -apple-system, sans-serif; max-width: 640px; margin: 40px auto; padding: 28px; border-radius: 16px; background: #18181b; color: #f4f4f5; border: 1px solid #27272a; box-shadow: 0 10px 25px rgba(0,0,0,0.5);"><h2 style="color: #34d399; margin-top: 0; font-size: 20px;">🤖 Robot Karel - Standalone Build</h2><p style="color: #a1a1aa; font-size: 14px; line-height: 1.6;">You opened the raw source <code>index.html</code> directly via the <code>file://</code> protocol. Modern browsers block unbundled TypeScript modules over <code>file://</code> due to CORS security rules.</p><div style="margin: 20px 0; padding: 16px; background: #27272a; border-radius: 12px; font-size: 13px; line-height: 1.6;"><strong style="color: #e4e4e7;">How to run:</strong><ol style="margin: 8px 0 0 20px; padding: 0;"><li style="margin-bottom: 6px;"><strong>Offline Standalone File:</strong> Run <code>npm run build</code>, then open <code>dist/index.html</code> (it is a 100% self-contained single file that works anywhere without a server).</li><li style="margin-bottom: 6px;"><strong>Dev Server:</strong> Run <code>npm run dev</code> and open <a href="http://localhost:3000" style="color: #34d399;">http://localhost:3000</a>.</li><li><strong>Preview:</strong> Run <code>npm run preview</code>.</li></ol></div></div>';
+            }
+          }, 600);
+        });
+      }
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

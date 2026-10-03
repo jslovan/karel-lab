@@ -1,0 +1,20 @@
+{
+  "id": "recursion_14_harvest",
+  "category": "recursion",
+  "difficulty": 2,
+  "robot": {
+    "x": 1,
+    "y": 1,
+    "dir": "vychod"
+  },
+  "beepers": {
+    "2,1": 1,
+    "3,1": 1,
+    "4,1": 1,
+    "5,1": 1,
+    "6,1": 1
+  },
+  "walls": [
+    { "x": 7, "y": 1, "type": "vychod" }
+  ]
+}

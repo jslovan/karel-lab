@@ -1,0 +1,21 @@
+{
+  "id": "cs_29_self_modifying",
+  "category": "theory",
+  "difficulty": 3,
+  "robot": {
+    "x": 1,
+    "y": 1,
+    "dir": "vychod"
+  },
+  "beepers": {
+    "1,1": 1,
+    "2,1": 1,
+    "3,1": 2,
+    "4,1": 1,
+    "5,1": 3,
+    "6,1": 0
+  },
+  "walls": [
+    { "x": 6, "y": 1, "type": "vychod" }
+  ]
+}

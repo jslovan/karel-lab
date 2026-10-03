@@ -1,0 +1,14 @@
+{
+  "id": "basics_01_monkey",
+  "category": "basics",
+  "difficulty": 1,
+  "robot": {
+    "x": 2,
+    "y": 1,
+    "dir": "sever"
+  },
+  "beepers": {
+    "2,1": 1
+  },
+  "walls": []
+}

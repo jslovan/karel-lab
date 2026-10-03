@@ -1,0 +1,17 @@
+{
+  "id": "basics_04_stairs",
+  "category": "basics",
+  "difficulty": 2,
+  "robot": {
+    "x": 1,
+    "y": 1,
+    "dir": "vychod"
+  },
+  "beepers": {},
+  "walls": [
+    { "x": 1, "y": 1, "type": "sever" },
+    { "x": 2, "y": 2, "type": "sever" },
+    { "x": 3, "y": 3, "type": "sever" },
+    { "x": 4, "y": 4, "type": "sever" }
+  ]
+}
